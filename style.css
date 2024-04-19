@@ -8,7 +8,15 @@ box-sizing: border-box; /* */
 
 body {
  font-family: "Quicksand", sans-serif;
+ 
 }
+
+.container{
+
+  max-width: 1100px;
+  margin: auto; /*center*/
+}
+/*home page begin */
 header {
   height: 100vh;
   background: url("./img/home_bg.jpeg") center center/cover no-repeat;
@@ -68,7 +76,6 @@ header .content span {
 
 .btn {
   text-decoration: none;
-  color : #fff;
   display: inline-block;
   padding: 15px 30px;
   border: none;
@@ -79,9 +86,110 @@ header .content span {
 .btn-primary {
 
   border: 1px solid #fff;
+  color: #fff;
 }
+
 .btn-primary:hover,
 .btn-secondary:hover,
 .btn-third {
   background: #e4b95b;
 }
+/* to make the black color on image*/
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0, 0.6);
+}
+header * {
+  z-index: 10;
+}
+
+/*home page end */
+/*about page begin */
+.btn-secondary {
+
+  background-color: black;
+  color: #fff;
+  margin-top: 2rem;
+}
+#about {
+  display: flex;
+  height: 85vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+#offers .title,
+#about .title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#offers h2,
+#about h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+#about .title p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #9a9a9a;
+}
+#about .about-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#about img {
+  max-width: 450px;
+}
+#about .about-content p {
+  margin-right: 7rem;
+  line-height: 1.6; /*space between the lines*/
+  color: #9a9a9a;
+  font-weight: 500;
+}
+
+/*about page end */
+
+/*offers start*/
+#offers {
+  display: flex;
+  height: 75vh;
+
+
+  background: url("./img/offer-background.jpg") center center/cover fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+#offers h2 {
+  color: #e4b95b;
+}
+#offers .offers-item{   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;}
+#offers img{
+  height: 100px;
+}
+
+
+/*offers end*/
+/*menuuu*/
+#menu {
+  display: flex;
+  height: 85vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+/*menuuu*/
